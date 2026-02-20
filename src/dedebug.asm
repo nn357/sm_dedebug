@@ -92,6 +92,22 @@ org $828b8e ; check if debug scrolling is enabled
   bra $8
   nop #8
   
+org $82b6ae ; draw map icons debug
+  bra $0c
+  nop #12
+  
+org $82b752 ; debug file select icons
+  bra $23
+  nop #35
+  
+org $82edb1 ; game options menu
+  bra $0a
+  nop #10
+
+org $82eeb7 ; game options menu index 4
+  bra $0a 
+  nop #10
+  
 org $90e72b ; debug command handler
   bra $1
   nop
@@ -105,7 +121,11 @@ org $90f52f ; debug commands
 org $90f5e4 ; debug loop (sound effects)
   bra $33
   pad $90f619
-
+ 
+org $91e0b3 ; demo routine, set debug handler to rts
+  bra $04
+  nop #4
+  
 org $91e355 ; debug. Handle sel l + bank
   pad $91e3f6
  
